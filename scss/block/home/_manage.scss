@@ -30,7 +30,10 @@
 }
 
 .manage__item {
-    @include imgItem;
+    @include imgItem();
+    &::before {
+        margin-right: 15px;
+    }
     &:nth-child(2):before {
         background-image: url(../../../img/setting.svg);
     }
@@ -81,17 +84,6 @@
     }
     .manage__title {
         max-width: 234px;
-    }
-    .manage__img {
-        margin: 0;
-    }
-    .manage__span {
-        margin-bottom: 16px;
-    }
-    .manage__item {
-       flex-direction: column;
-       justify-content: center;
-       text-align: center;
     }
     .manage__container {
         padding-inline: 20px;

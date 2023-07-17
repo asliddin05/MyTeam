@@ -1,6 +1,7 @@
 @mixin imgItem {
     display: flex;
-    max-width: 502px;
+    max-width: 500px;
+
     &:before {
         content: "";
         width: 72px;
@@ -8,9 +9,17 @@
         display: inline-block;
         background-image: url(../img/user.svg);
         flex-shrink: 0;
-        margin-right: 15px;
     }
+
     &:not(:last-child) {
         margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 590px) {
+    .manage__item {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
     }
 }
