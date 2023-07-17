@@ -1,0 +1,16 @@
+@mixin imgItem {
+    display: flex;
+    max-width: 502px;
+    &:before {
+        content: "";
+        width: 72px;
+        height: 72px;
+        display: inline-block;
+        background-image: url(../img/user.svg);
+        flex-shrink: 0;
+        margin-right: 15px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
